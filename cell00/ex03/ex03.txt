@@ -1,0 +1,2 @@
+echo "ls | wc -l" > count_files.sh
+./count_files.sh
