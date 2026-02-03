@@ -1,0 +1,86 @@
+body {
+    background-color: #ffe6fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.card-container {
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3); 
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+
+.card-title {
+    background-color: #ff9ff3; 
+    color: white;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 5px solid #ffe6fa; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.login-name {
+    margin: 10px 0 5px 0;
+    color: #e056fd; 
+}
+
+.description {
+    color: #ffb8b8; 
+    font-style: italic;
+    margin: 0 0 20px 0;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #ffcccc; 
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #ff9ff3; 
+}
+
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #ff9ff3; 
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #f368e0; 
+}
