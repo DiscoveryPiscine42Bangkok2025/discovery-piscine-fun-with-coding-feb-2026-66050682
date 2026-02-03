@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>It's over 9000</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            font-family: sans-serif;
+        }
+        .calculator {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: flex;
+            gap: 10px;
+        }
+        input, select {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #bdc3c7;
+        }
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="leftOp" placeholder="Left Number">
+        
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+
+        <input type="text" id="rightOp" placeholder="Right Number">
+
+        <input type="submit" value="Try me!" onclick="calculate()">
+    </div>
+
+    <script>
+        setInterval(function() {
+            alert("Please, use me...");
+        }, 30000);
+
+        
+        function calculate() {
+            let leftStr = document.getElementById("leftOp").value;
+            let rightStr = document.getElementById("rightOp").value;
+            let op = document.getElementById("operator").value;
+
+            let leftNum = parseInt(leftStr);
+            let rightNum = parseInt(rightStr);
+
+            if (leftNum < 0 || rightNum < 0 || isNaN(leftNum) || isNaN(rightNum)) {
+                alert("Error :(");
+                console.log("Error :(");
+                return; 
+            }
+
+            let result;
+            if (op == '+') {
+                result = leftNum + rightNum;
+            } else if (op == '-') {
+                result = leftNum - rightNum;
+            } else if (op == '*') {
+                result = leftNum * rightNum;
+            } else if (op == '/') {
+                if (rightNum == 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+                result = leftNum / rightNum;
+            } else if (op == '%') {
+                if (rightNum == 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+                result = leftNum % rightNum;
+            }
+
+            alert(result);
+            console.log(result);
+        }
+    </script>
+
+</body>
+</html>
