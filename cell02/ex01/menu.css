@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.sandwich-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sandwich-btn {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ingredients-list {
+    display: none; 
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.ingredients-list a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.ingredients-list a:hover {
+    background-color: #ddd;
+}
+
+.sandwich-container:hover .ingredients-list {
+    display: block;
+}
+
+.sandwich-container:hover .sandwich-btn {
+    background-color: #3e8e41;
+}
